@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
     
@@ -45,16 +46,23 @@ class HomeViewController: UIViewController {
         performSegue(withIdentifier: "profieSegue", sender: nil)
     }
     
+    @IBAction func signOutButtonClick(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signInVC") as UIViewController
+        self.present(viewController, animated: false, completion: nil)
+        
+        
+        //performSegue(withIdentifier: "signOutSegue", sender: nil)
+        
+    }
     
-    //    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(true, animated: animated)
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: animated)
-//    }
+
     
     
 }

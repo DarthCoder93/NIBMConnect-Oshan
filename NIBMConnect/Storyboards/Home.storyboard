@@ -206,8 +206,11 @@
                         <viewLayoutGuide key="safeArea" id="C4E-66-ZOY"/>
                     </view>
                     <navigationItem key="navigationItem" id="LhZ-j4-2yZ">
-                        <barButtonItem key="rightBarButtonItem" image="profile" id="OQ0-Mg-jGj">
+                        <barButtonItem key="rightBarButtonItem" image="logout" id="OQ0-Mg-jGj">
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="signOutButtonClick:" destination="WHa-VX-9zo" id="ePl-KH-6zS"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -220,11 +223,20 @@
                         <segue destination="e0C-J2-mMa" kind="show" identifier="hoemToFriendsSegue" id="oGc-Em-pzx"/>
                         <segue destination="2p4-g4-DUd" kind="show" identifier="homeworkSegue" id="Uf5-0R-1aN"/>
                         <segue destination="xQL-qz-mcB" kind="show" identifier="profieSegue" id="XSp-Ym-ga4"/>
+                        <segue destination="bY0-hL-mzh" kind="show" identifier="signOutSegue" id="fg6-LO-hKD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Be3-a3-lGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1068" y="166.8665667166417"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="s3V-DG-MHp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="bY0-hL-mzh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4i-y8-CzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="742"/>
         </scene>
         <!--Friends View Controller-->
         <scene sceneID="4A7-Nu-dEl">
@@ -881,9 +893,9 @@
         <image name="gender" width="33" height="33"/>
         <image name="homework" width="500" height="500"/>
         <image name="house" width="60" height="60"/>
+        <image name="logout" width="24" height="24"/>
         <image name="name" width="756" height="756"/>
         <image name="phoneReceiver" width="434" height="434"/>
-        <image name="profile" width="24" height="24"/>
         <image name="profileBg" width="801" height="801"/>
         <image name="userAvatar" width="820" height="515"/>
         <namedColor name="BackgroundColor">

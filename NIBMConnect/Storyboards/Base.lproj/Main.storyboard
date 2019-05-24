@@ -37,7 +37,7 @@
                                 <rect key="frame" x="40" y="184" width="295" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWE-rd-8l6">
                                 <rect key="frame" x="40" y="286" width="295" height="14.333333333333314"/>
@@ -365,6 +365,6 @@
         <image name="signUpBg" width="557" height="550"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lio-u2-qcj"/>
+        <segue reference="mzI-St-Jb5"/>
     </inferredMetricsTieBreakers>
 </document>
