@@ -26,6 +26,10 @@
 		0EF33D8E229389F100849980 /* HomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF33D8D229389F000849980 /* HomeworkViewController.swift */; };
 		0EF33D9022938A5200849980 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF33D8F22938A5200849980 /* MyProfileViewController.swift */; };
 		1DCBE65A66D6D62C753931EC /* Pods_NIBMConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A75975F61F50A021AAECD /* Pods_NIBMConnect.framework */; };
+		806BB845229A380A00ED57D0 /* HomeWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806BB843229A380A00ED57D0 /* HomeWorkTableViewCell.swift */; };
+		806BB846229A380A00ED57D0 /* HomeWorkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806BB844229A380A00ED57D0 /* HomeWorkTableViewCell.xib */; };
+		806BB848229A384800ED57D0 /* HomeWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806BB847229A384800ED57D0 /* HomeWorkModel.swift */; };
+		806BB84A229A3E3B00ED57D0 /* AddHomeWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806BB849229A3E3B00ED57D0 /* AddHomeWorkViewController.swift */; };
 		80C44EC922962CFC002E951D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80C44EC822962CFC002E951D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,10 @@
 		0EF33D8D229389F000849980 /* HomeworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
 		0EF33D8F22938A5200849980 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		802A75975F61F50A021AAECD /* Pods_NIBMConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBMConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		806BB843229A380A00ED57D0 /* HomeWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkTableViewCell.swift; sourceTree = "<group>"; };
+		806BB844229A380A00ED57D0 /* HomeWorkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeWorkTableViewCell.xib; sourceTree = "<group>"; };
+		806BB847229A384800ED57D0 /* HomeWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkModel.swift; sourceTree = "<group>"; };
+		806BB849229A3E3B00ED57D0 /* AddHomeWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeWorkViewController.swift; sourceTree = "<group>"; };
 		80C44EC822962CFC002E951D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9982418F56EABF5C1B5A4F13 /* Pods-NIBMConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBMConnect.debug.xcconfig"; path = "Target Support Files/Pods-NIBMConnect/Pods-NIBMConnect.debug.xcconfig"; sourceTree = "<group>"; };
 		B566CE611F68B4CDAE68CD02 /* Pods-NIBMConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBMConnect.release.xcconfig"; path = "Target Support Files/Pods-NIBMConnect/Pods-NIBMConnect.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 				0EF33D8B22937DF900849980 /* FriendDetailsViewController.swift */,
 				0EF33D8D229389F000849980 /* HomeworkViewController.swift */,
 				0EF33D8F22938A5200849980 /* MyProfileViewController.swift */,
+				806BB849229A3E3B00ED57D0 /* AddHomeWorkViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF33D862292B80800849980 /* Friend.swift */,
+				806BB847229A384800ED57D0 /* HomeWorkModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				0EF33D892292BA6800849980 /* FriendTableViewCell.swift */,
+				806BB843229A380A00ED57D0 /* HomeWorkTableViewCell.swift */,
+				806BB844229A380A00ED57D0 /* HomeWorkTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -226,6 +238,7 @@
 				0ED27BE6228D2BD9008D6668 /* LaunchScreen.storyboard in Resources */,
 				0EF33D822292673900849980 /* Home.storyboard in Resources */,
 				80C44EC922962CFC002E951D /* GoogleService-Info.plist in Resources */,
+				806BB846229A380A00ED57D0 /* HomeWorkTableViewCell.xib in Resources */,
 				0ED27BE3228D2BD9008D6668 /* Assets.xcassets in Resources */,
 				0ED27BDE228D2BD7008D6668 /* Main.storyboard in Resources */,
 			);
@@ -324,11 +337,14 @@
 				0EF33D9022938A5200849980 /* MyProfileViewController.swift in Sources */,
 				0ED27BFA228D56FC008D6668 /* SignUpViewController.swift in Sources */,
 				0EF33D8C22937DF900849980 /* FriendDetailsViewController.swift in Sources */,
+				806BB848229A384800ED57D0 /* HomeWorkModel.swift in Sources */,
 				0ED27BEF228D2F1C008D6668 /* SignInViewController.swift in Sources */,
 				0EF33D8A2292BA6800849980 /* FriendTableViewCell.swift in Sources */,
+				806BB84A229A3E3B00ED57D0 /* AddHomeWorkViewController.swift in Sources */,
 				0ED27BFC228D5707008D6668 /* HomeViewController.swift in Sources */,
 				0ED27BE1228D2BD7008D6668 /* NIBMConnect.xcdatamodeld in Sources */,
 				0ED27BFE228D621C008D6668 /* ForgotPasswordViewController.swift in Sources */,
+				806BB845229A380A00ED57D0 /* HomeWorkTableViewCell.swift in Sources */,
 				0EF33D872292B80800849980 /* Friend.swift in Sources */,
 				0EF33D8E229389F100849980 /* HomeworkViewController.swift in Sources */,
 				0ED27BF3228D5088008D6668 /* Tools.swift in Sources */,

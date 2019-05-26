@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeWorkTableViewCell" rowHeight="148" id="KGk-i7-Jjw" customClass="HomeWorkTableViewCell" customModule="NIBMConnect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="452" height="148"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="452" height="147.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXL-dV-Ero">
+                        <rect key="frame" x="28" y="19" width="396" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3A-cc-DLc">
+                        <rect key="frame" x="28" y="56" width="396" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3c-Ue-svZ">
+                        <rect key="frame" x="28" y="92" width="62" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12/05/1995" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi1-EB-fGw">
+                        <rect key="frame" x="28" y="113" width="87" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2z-TM-v2x">
+                        <rect key="frame" x="394.5" y="92" width="49.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/05/1995" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiN-yj-VjM">
+                        <rect key="frame" x="357" y="114.5" width="87" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="k2z-TM-v2x" firstAttribute="top" secondItem="q3A-cc-DLc" secondAttribute="bottom" constant="14" id="4tk-go-2U9"/>
+                    <constraint firstAttribute="trailing" secondItem="JiN-yj-VjM" secondAttribute="trailing" constant="8" id="Cft-a0-luM"/>
+                    <constraint firstItem="F3c-Ue-svZ" firstAttribute="top" secondItem="q3A-cc-DLc" secondAttribute="bottom" constant="14" id="Cn5-pQ-zAr"/>
+                    <constraint firstItem="q3A-cc-DLc" firstAttribute="top" secondItem="BXL-dV-Ero" secondAttribute="bottom" constant="16" id="JAx-7o-mmZ"/>
+                    <constraint firstItem="JiN-yj-VjM" firstAttribute="top" secondItem="k2z-TM-v2x" secondAttribute="bottom" constant="8" id="K7M-HP-CVs"/>
+                    <constraint firstItem="F3c-Ue-svZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Mwe-fH-k7k"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="BXL-dV-Ero" secondAttribute="trailing" constant="8" id="O1N-oy-NWj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="q3A-cc-DLc" secondAttribute="trailing" constant="8" id="PVL-Gb-8tZ"/>
+                    <constraint firstAttribute="trailing" secondItem="k2z-TM-v2x" secondAttribute="trailing" constant="8" id="TfB-OZ-shq"/>
+                    <constraint firstItem="k2z-TM-v2x" firstAttribute="top" secondItem="q3A-cc-DLc" secondAttribute="bottom" constant="14" id="X2N-co-jwm"/>
+                    <constraint firstAttribute="bottom" secondItem="JiN-yj-VjM" secondAttribute="bottom" constant="12" id="bPC-eD-cp4"/>
+                    <constraint firstItem="BXL-dV-Ero" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="bR7-LQ-XNo"/>
+                    <constraint firstItem="BXL-dV-Ero" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="ct8-be-ooJ"/>
+                    <constraint firstItem="q3A-cc-DLc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="gr1-W5-MWQ"/>
+                    <constraint firstAttribute="trailing" secondItem="k2z-TM-v2x" secondAttribute="trailing" constant="8" id="zHZ-JV-5Fw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addedDateLabel" destination="vi1-EB-fGw" id="I94-Fv-Yym"/>
+                <outlet property="deadlineLabel" destination="JiN-yj-VjM" id="fYM-mH-gIH"/>
+                <outlet property="descriptionLabel" destination="q3A-cc-DLc" id="0Me-33-8Nf"/>
+                <outlet property="titleLabel" destination="BXL-dV-Ero" id="hvh-tS-T1o"/>
+            </connections>
+            <point key="canvasLocation" x="161.59999999999999" y="95.352323838080963"/>
+        </tableViewCell>
+    </objects>
+</document>

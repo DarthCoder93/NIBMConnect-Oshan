@@ -333,13 +333,103 @@
                     <view key="view" contentMode="scaleToFill" id="Qiw-70-xfr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-SP-f7U">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mvc-SP-f7U" firstAttribute="top" secondItem="j25-Az-xz6" secondAttribute="top" id="0Kn-wb-sCV"/>
+                            <constraint firstItem="j25-Az-xz6" firstAttribute="bottom" secondItem="Mvc-SP-f7U" secondAttribute="bottom" id="RAO-Bf-vif"/>
+                            <constraint firstItem="Mvc-SP-f7U" firstAttribute="leading" secondItem="j25-Az-xz6" secondAttribute="leading" id="Y4t-OK-T1j"/>
+                            <constraint firstItem="j25-Az-xz6" firstAttribute="trailing" secondItem="Mvc-SP-f7U" secondAttribute="trailing" id="i3o-cU-Wgz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="j25-Az-xz6"/>
                     </view>
+                    <connections>
+                        <outlet property="homeWorkTableView" destination="Mvc-SP-f7U" id="yLj-SQ-JWa"/>
+                        <segue destination="q7F-0t-bcK" kind="show" identifier="addHomeworkSegue" id="Rd9-3J-HGd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGa-Uh-RwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1921" y="777"/>
+        </scene>
+        <!--Add Home Work View Controller-->
+        <scene sceneID="eNe-yb-Ajl">
+            <objects>
+                <viewController id="q7F-0t-bcK" customClass="AddHomeWorkViewController" customModule="NIBMConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="40q-CI-UpX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cks-cq-C3T">
+                                <rect key="frame" x="20" y="94" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Homework Description" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a95-vA-ytR">
+                                <rect key="frame" x="20" y="144" width="335" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vlO-Ph-oyM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submmision Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqc-IN-4Pc">
+                                <rect key="frame" x="20" y="224" width="114" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="A3C-fV-i9x">
+                                <rect key="frame" x="0.0" y="260" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="580535161.01584303">
+                                    <!--2019-05-26 03:46:01 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="selectedDateChanged:" destination="q7F-0t-bcK" eventType="valueChanged" id="Ogf-cc-X1A"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7O-3t-UCu">
+                                <rect key="frame" x="150" y="224" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cks-cq-C3T" firstAttribute="leading" secondItem="bOG-zQ-Vgb" secondAttribute="leading" constant="20" id="45U-ca-SCE"/>
+                            <constraint firstItem="cks-cq-C3T" firstAttribute="top" secondItem="bOG-zQ-Vgb" secondAttribute="top" constant="30" id="56h-Fn-Yze"/>
+                            <constraint firstItem="A3C-fV-i9x" firstAttribute="trailing" secondItem="bOG-zQ-Vgb" secondAttribute="trailing" id="6Am-dF-rul"/>
+                            <constraint firstItem="bOG-zQ-Vgb" firstAttribute="trailing" secondItem="a95-vA-ytR" secondAttribute="trailing" constant="20" id="9Ci-xr-15c"/>
+                            <constraint firstItem="a95-vA-ytR" firstAttribute="leading" secondItem="bOG-zQ-Vgb" secondAttribute="leading" constant="20" id="E1X-vx-Pr7"/>
+                            <constraint firstItem="T7O-3t-UCu" firstAttribute="top" secondItem="a95-vA-ytR" secondAttribute="bottom" constant="20" id="IDU-tq-qBB"/>
+                            <constraint firstItem="pqc-IN-4Pc" firstAttribute="top" secondItem="a95-vA-ytR" secondAttribute="bottom" constant="20" id="R6f-yQ-Yth"/>
+                            <constraint firstItem="pqc-IN-4Pc" firstAttribute="leading" secondItem="bOG-zQ-Vgb" secondAttribute="leading" constant="20" id="Xoi-V1-cvG"/>
+                            <constraint firstItem="T7O-3t-UCu" firstAttribute="leading" secondItem="pqc-IN-4Pc" secondAttribute="trailing" constant="16" id="ZkP-0E-DjV"/>
+                            <constraint firstItem="A3C-fV-i9x" firstAttribute="leading" secondItem="bOG-zQ-Vgb" secondAttribute="leading" id="aUb-8M-prz"/>
+                            <constraint firstItem="bOG-zQ-Vgb" firstAttribute="trailing" secondItem="cks-cq-C3T" secondAttribute="trailing" constant="20" id="eFZ-Pk-jpa"/>
+                            <constraint firstItem="A3C-fV-i9x" firstAttribute="top" secondItem="pqc-IN-4Pc" secondAttribute="bottom" constant="20" id="uIU-AQ-8Bf"/>
+                            <constraint firstItem="a95-vA-ytR" firstAttribute="top" secondItem="cks-cq-C3T" secondAttribute="bottom" constant="20" id="vgd-9X-oLy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bOG-zQ-Vgb"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="T7O-3t-UCu" id="HUz-0E-WXD"/>
+                        <outlet property="descriptionTextField" destination="a95-vA-ytR" id="2ZX-d9-rMP"/>
+                        <outlet property="submissionDatePicker" destination="A3C-fV-i9x" id="FnA-VK-xuG"/>
+                        <outlet property="titleTextField" destination="cks-cq-C3T" id="6zO-Sa-I2g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lpo-Un-ZsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2809" y="777"/>
         </scene>
         <!--My Profile View Controller-->
         <scene sceneID="LFS-VB-6lP">
