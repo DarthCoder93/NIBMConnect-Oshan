@@ -24,7 +24,7 @@ class HomeWorkTableViewCell: UITableViewCell {
 
     func setUpData(homework: HomeWorkModel)  {
         titleLabel.text = homework.title
-        deadlineLabel.text = homework.description
+        descriptionLabel.text = homework.description
         
         let dateformatter = DateFormatter()
         

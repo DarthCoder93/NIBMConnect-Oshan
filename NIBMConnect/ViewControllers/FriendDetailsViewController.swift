@@ -25,6 +25,8 @@ class FriendDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        friendImageView.layer.cornerRadius = friendImageView.frame.width / 2
+        
         if friend != nil {
             
             if friend?.imageUrl != nil || friend?.imageUrl != "" {

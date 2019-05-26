@@ -35,15 +35,47 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func friendsClick(_ sender: Any) {
-        performSegue(withIdentifier: "hoemToFriendsSegue", sender: nil)
+        
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        self.friendsView.transform = CGAffineTransform(scaleX: 0.975, y: 0.96)
+        },
+                       completion: { finish in
+                        UIButton.animate(withDuration: 0.2, animations: {
+                            self.friendsView.transform = CGAffineTransform.identity
+                        },completion: { finish in
+                            self.performSegue(withIdentifier: "hoemToFriendsSegue", sender: nil)
+                        })
+        })
     }
     
     @IBAction func homeworkClick(_ sender: Any) {
-        performSegue(withIdentifier: "homeworkSegue", sender: nil)
+        
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        self.homeworkView.transform = CGAffineTransform(scaleX: 0.975, y: 0.96)
+        },
+                       completion: { finish in
+                        UIButton.animate(withDuration: 0.2, animations: {
+                            self.homeworkView.transform = CGAffineTransform.identity
+                        },completion: { finish in
+                            self.performSegue(withIdentifier: "homeworkSegue", sender: nil)
+                        })
+        })
     }
     
     @IBAction func myProfileClick(_ sender: Any) {
-        performSegue(withIdentifier: "profieSegue", sender: nil)
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        self.profileView.transform = CGAffineTransform(scaleX: 0.975, y: 0.96)
+        },
+                       completion: { finish in
+                        UIButton.animate(withDuration: 0.2, animations: {
+                            self.profileView.transform = CGAffineTransform.identity
+                        },completion: { finish in
+                            self.performSegue(withIdentifier: "profieSegue", sender: nil)
+                        })
+        })
     }
     
     @IBAction func signOutButtonClick(_ sender: Any) {
