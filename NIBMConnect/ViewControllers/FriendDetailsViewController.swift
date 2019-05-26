@@ -41,7 +41,7 @@ class FriendDetailsViewController: UIViewController {
             
             phoneNumber.text = friend?.phoneNumber
             
-            
+            facebookUrl.text = friend?.facebookUrl
             
             
             
@@ -51,5 +51,12 @@ class FriendDetailsViewController: UIViewController {
 
     }
 
-
+    @IBAction func onFBLinkClick(_ sender: Any) {
+        
+        if friend?.facebookUrl != nil || friend?.facebookUrl != "" {
+            UIApplication.tryURL(urls: [friend?.facebookUrl! ?? ""])
+        }
+        
+    }
+    
 }

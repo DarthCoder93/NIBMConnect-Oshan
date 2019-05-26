@@ -34,6 +34,13 @@ class MyProfileViewController: UIViewController {
         
     }
     
+    @IBAction func onFBUrlClick(_ sender: Any) {
+       
+            UIApplication.tryURL(urls: ["https://www.facebook.com/oshan.madusanka"])
+        
+        
+    }
+    
     
     func authenticateUser(){
         let authContext = LAContext()
@@ -71,6 +78,7 @@ class MyProfileViewController: UIViewController {
         }
     }
     
+  
     
     
 //    func authenticateUser() {

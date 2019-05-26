@@ -15,6 +15,7 @@ class FriendTableViewCell: UITableViewCell {
     @IBOutlet weak var friendImageView: UIImageView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var cityLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +30,7 @@ class FriendTableViewCell: UITableViewCell {
     
     func setUpData(friend: Friend)  {
         lblName.text = friend.firstName
+        cityLabel.text = friend.city
         if friend.imageUrl != nil {
             Nuke.loadImage(with: URL(string: friend.imageUrl!)!, into: self.friendImageView)
             

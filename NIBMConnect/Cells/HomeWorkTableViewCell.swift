@@ -25,6 +25,25 @@ class HomeWorkTableViewCell: UITableViewCell {
     func setUpData(homework: HomeWorkModel)  {
         titleLabel.text = homework.title
         deadlineLabel.text = homework.description
+        
+        let dateformatter = DateFormatter()
+        
+        dateformatter.dateStyle = DateFormatter.Style.short
+        
+        dateformatter.timeStyle = DateFormatter.Style.short
+        
+        let addedTime = dateformatter.string(from: homework.timeAdded)
+        
+        addedDateLabel.text = addedTime
+        
+        if homework.submissionDate != nil {
+        
+            let deadLineDate = dateformatter.string(from: homework.submissionDate!)
+        
+            deadlineLabel.text = deadLineDate
+            
+        }
+        
     }
 
 }

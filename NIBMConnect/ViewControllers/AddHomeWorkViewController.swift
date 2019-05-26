@@ -24,9 +24,6 @@ class AddHomeWorkViewController: UIViewController {
         
         addNavigationBarButton()
         
-        
-        
-        
     }
     
     private func addNavigationBarButton(){

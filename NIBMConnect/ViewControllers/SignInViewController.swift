@@ -17,6 +17,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var lblErrorMessage: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +53,15 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     @IBAction func onSignInClick(_ sender: Any) {
         
         if validateForm() {
+            showProgress()
             Auth.auth().signIn(withEmail: editextEmail.text!, password: editTextPassword.text!) { [weak self] user, error in
                 guard let strongSelf = self else { return }
                 
                 if (error != nil){
+                    strongSelf.hideProgress()
                     strongSelf.lblErrorMessage.text = error?.localizedDescription
                 } else {
+                    strongSelf.hideProgress()
                     strongSelf.userSignedIn()
                 }
                 
@@ -68,6 +72,17 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBAction func onForgotPasswordClick(_ sender: Any) {
         performSegue(withIdentifier: "forgotPasswordSegue", sender: nil)
+    }
+    
+    
+    func showProgress() {
+        self.activityIndicator.startAnimating()
+        signInButton.isEnabled = false
+    }
+    
+    func hideProgress() {
+        self.activityIndicator.stopAnimating()
+        signInButton.isEnabled = true
     }
     
     

@@ -26,6 +26,8 @@ class FriendsViewController: UIViewController {
         tableview.dataSource = self
         tableview.delegate = self
         
+        tableview.separatorStyle = .none
+        
         retriveFriendsFromFirebase()
     
     }
@@ -47,7 +49,8 @@ class FriendsViewController: UIViewController {
                                     imageUrl: friendObject!["imageUrl"] as? String,
                                     birthday: friendObject!["birthday"] as? String,
                                     gender: friendObject!["gender"] as? String,
-                                    phoneNumber: friendObject!["phoneNumber"] as? String
+                                    phoneNumber: friendObject!["phoneNumber"] as? String,
+                                    fbUrl: friendObject!["facebookUrl"] as? String
                                     )
 
                 self.friendsList.append(friend)

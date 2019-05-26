@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -26,33 +26,38 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3A-cc-DLc">
-                        <rect key="frame" x="28" y="56" width="396" height="22"/>
+                        <rect key="frame" x="28" y="56" width="396" height="25"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3c-Ue-svZ">
-                        <rect key="frame" x="28" y="92" width="62" height="14"/>
+                        <rect key="frame" x="28" y="95" width="62" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12/05/1995" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi1-EB-fGw">
-                        <rect key="frame" x="28" y="113" width="87" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/05/1995" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi1-EB-fGw">
+                        <rect key="frame" x="28" y="116" width="120" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="zXJ-oM-Jbt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2z-TM-v2x">
-                        <rect key="frame" x="394.5" y="92" width="49.5" height="14.5"/>
+                        <rect key="frame" x="394.5" y="95" width="49.5" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/05/1995" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiN-yj-VjM">
-                        <rect key="frame" x="357" y="114.5" width="87" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/05/1995" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiN-yj-VjM">
+                        <rect key="frame" x="284" y="117.5" width="160" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="Q0u-LC-zIg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -60,17 +65,21 @@
                 <constraints>
                     <constraint firstItem="k2z-TM-v2x" firstAttribute="top" secondItem="q3A-cc-DLc" secondAttribute="bottom" constant="14" id="4tk-go-2U9"/>
                     <constraint firstAttribute="trailing" secondItem="JiN-yj-VjM" secondAttribute="trailing" constant="8" id="Cft-a0-luM"/>
+                    <constraint firstItem="JiN-yj-VjM" firstAttribute="top" secondItem="k2z-TM-v2x" secondAttribute="bottom" constant="8" id="Cfw-UP-zRp"/>
                     <constraint firstItem="F3c-Ue-svZ" firstAttribute="top" secondItem="q3A-cc-DLc" secondAttribute="bottom" constant="14" id="Cn5-pQ-zAr"/>
                     <constraint firstItem="q3A-cc-DLc" firstAttribute="top" secondItem="BXL-dV-Ero" secondAttribute="bottom" constant="16" id="JAx-7o-mmZ"/>
                     <constraint firstItem="JiN-yj-VjM" firstAttribute="top" secondItem="k2z-TM-v2x" secondAttribute="bottom" constant="8" id="K7M-HP-CVs"/>
                     <constraint firstItem="F3c-Ue-svZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Mwe-fH-k7k"/>
+                    <constraint firstAttribute="trailing" secondItem="JiN-yj-VjM" secondAttribute="trailing" constant="8" id="N72-16-10J"/>
                     <constraint firstAttribute="trailingMargin" secondItem="BXL-dV-Ero" secondAttribute="trailing" constant="8" id="O1N-oy-NWj"/>
                     <constraint firstAttribute="trailingMargin" secondItem="q3A-cc-DLc" secondAttribute="trailing" constant="8" id="PVL-Gb-8tZ"/>
                     <constraint firstAttribute="trailing" secondItem="k2z-TM-v2x" secondAttribute="trailing" constant="8" id="TfB-OZ-shq"/>
                     <constraint firstItem="k2z-TM-v2x" firstAttribute="top" secondItem="q3A-cc-DLc" secondAttribute="bottom" constant="14" id="X2N-co-jwm"/>
+                    <constraint firstItem="vi1-EB-fGw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="aw6-el-Uei"/>
                     <constraint firstAttribute="bottom" secondItem="JiN-yj-VjM" secondAttribute="bottom" constant="12" id="bPC-eD-cp4"/>
                     <constraint firstItem="BXL-dV-Ero" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="bR7-LQ-XNo"/>
                     <constraint firstItem="BXL-dV-Ero" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="ct8-be-ooJ"/>
+                    <constraint firstItem="vi1-EB-fGw" firstAttribute="top" secondItem="F3c-Ue-svZ" secondAttribute="bottom" constant="7" id="dic-Mk-AI6"/>
                     <constraint firstItem="q3A-cc-DLc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="gr1-W5-MWQ"/>
                     <constraint firstAttribute="trailing" secondItem="k2z-TM-v2x" secondAttribute="trailing" constant="8" id="zHZ-JV-5Fw"/>
                 </constraints>

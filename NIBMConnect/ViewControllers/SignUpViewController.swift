@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var editTextConfirmPassword: UITextField!
     @IBOutlet weak var lblError: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,9 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func onSignUpClick(_ sender: Any) {
+       
         if (validateForm()){
+            showProgress()
             signUpUser()
         }
     }
@@ -36,6 +39,7 @@ class SignUpViewController: UIViewController {
         Auth.auth().createUser(withEmail: editTextEmail.text!, password: editTextPassword.text!) { authResult, error in
             if let error = error {
                 self.lblError.text = error.localizedDescription
+                self.hideProgress()
                 return
             }
             
@@ -45,18 +49,31 @@ class SignUpViewController: UIViewController {
     }
     
     private func updateUserName() {
+        
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = self.editTextUserName.text
         changeRequest?.commitChanges { (error) in
             if let error = error {
                 self.lblError.text = error.localizedDescription
+                self.hideProgress()
                 return
             }
             
             //update username successfull
+            self.hideProgress()
             self.signUpUserDone()
-            
         }
+        
+    }
+    
+    func showProgress() {
+        self.activityIndicator.startAnimating()
+        signUpButton.isEnabled = false
+    }
+    
+    func hideProgress() {
+        self.activityIndicator.stopAnimating()
+        signUpButton.isEnabled = true
     }
     
     private func signUpUserDone() {

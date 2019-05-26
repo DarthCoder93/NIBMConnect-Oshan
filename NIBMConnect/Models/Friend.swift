@@ -17,6 +17,7 @@ class Friend {
     var birthday: String?
     var gender: String?
     var phoneNumber: String?
+    var facebookUrl: String?
     
     init(firstName: String,
          lastName: String,
@@ -24,7 +25,8 @@ class Friend {
          imageUrl: String?,
          birthday: String?,
          gender: String?,
-         phoneNumber: String?) {
+         phoneNumber: String?,
+         fbUrl: String?) {
         
         self.firstName = firstName
         self.lastName = lastName
@@ -33,6 +35,7 @@ class Friend {
         self.birthday = birthday
         self.gender = gender
         self.phoneNumber = phoneNumber
+        self.facebookUrl = fbUrl
     }
     
     
