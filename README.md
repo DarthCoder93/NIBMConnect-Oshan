@@ -3,8 +3,8 @@
 
 Ios Assignment
 
-Name : B.D.O Madushanka
-NIBM ID : COBSCComp171p-019
+Name : B.D.O Madushanka 
+NIBM ID : COBSCComp171p-019 
 Coventry ID : 8512574
 
 Sample Login Credentials
